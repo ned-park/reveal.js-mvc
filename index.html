@@ -45,13 +45,13 @@
 					<p>What does it all look like?</p>
 				</section>
 				<section>
-					<img src="mvc.png" alt="Client --> Router --> Controller --> Models, Views --> Controller --> Client">
+					<img src="imgs/mvc.png" alt="Client --> Router --> Controller --> Models, Views --> Controller --> Client">
 				</section>
 				<section>
 					<ol>
 						<li>The user interacts with their browser to send a request to the server</li>
 						<li>The router examines the request and directs it to the appropriate controller</li>
-						<li>The controller handles the request.  Often this involves handing it off to a model. Suppose it's a put request, the controller waits for a promise to complete... </li>
+						<li>The controller handles the request.  Often this involves handing it off to a model. Suppose it's a PUT request, the controller waits for a promise to complete... </li>
 					</ol>
 				</section>
 				<section>
@@ -66,15 +66,18 @@
 				<section>
 					<h4>...Then</h4>
 					<ol start="4">
-						<li>The controller continues its process, and assuming the request was successful selects a view to use or a page to redirect the browser to</li>
-						<li>The view is rendered (or the client is redirected and makes a get request to the controller which will ultimately result in a view being rendered)</li>
+						<li>The controller continues its process, and assuming the request was successful to redirect the browser to the appropriate page, which 
+							will cause a new GET request (see diagram). The GET is made, and the controller receives the data from the model for the GET, it selects a view to render for the GET request.</li>
+						<li>The view is rendered</li>
 						<li>The page the view generates is returned to the controller, which passes it back to the browser</li>
 						<li>The user see the newly rendered page</li>
 					</ol>
 				</section>
 				<section>
 					<p>Taking the previous slides and combining them into the image before, we see</p>
-					<img src="mvc_put.png" alt="Previous slides in graphical form">
+				</section>
+				<section>
+					<img src="imgs/mvc_put.png" alt="Previous slides in graphical form">
 				</section>
 				<section>
 					So what the heck is a schema?
